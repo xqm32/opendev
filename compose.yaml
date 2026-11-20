@@ -1,8 +1,7 @@
 services:
   opencode:
     build: .
-    ports:
-      - ${OPENCODE_PORT:-4096}:4096
+    network_mode: host
     environment:
       OPENCODE_PASSWORD: ${OPENCODE_PASSWORD:-opencode}
       OPENCODE_API_KEY: ${OPENCODE_API_KEY}
